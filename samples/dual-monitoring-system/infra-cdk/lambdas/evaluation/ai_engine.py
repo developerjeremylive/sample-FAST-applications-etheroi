@@ -6,16 +6,15 @@
 import json
 import uuid
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 from aws_lambda_powertools import Logger
-
 from models import (
-    Session,
-    Pattern,
     AnalysisResult,
+    Pattern,
     PromptChange,
-    PromptImprovement
+    PromptImprovement,
+    Session,
 )
 
 logger = Logger()

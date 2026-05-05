@@ -5,18 +5,18 @@
 
 import json
 from datetime import datetime, timedelta
-from unittest.mock import Mock, MagicMock
+from unittest.mock import MagicMock, Mock
 
 from ai_engine import AIAnalysisEngine
 from models import (
-    Session,
-    Trace,
-    Span,
-    EvaluationResult,
-    SessionStatus,
-    Pattern,
     AnalysisResult,
-    PromptImprovement
+    EvaluationResult,
+    Pattern,
+    PromptImprovement,
+    Session,
+    SessionStatus,
+    Span,
+    Trace,
 )
 
 
