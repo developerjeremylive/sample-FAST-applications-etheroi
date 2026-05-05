@@ -68,7 +68,7 @@ While [FAST](https://github.com/awslabs/fullstack-solution-template-for-agentcor
 
 **Use Case**: Monitoring multi-agent systems in production where traditional infrastructure metrics are insufficient — particularly swarm-based architectures with dynamic handoffs where quality degradation and failure propagation are hard to detect.
 
-![Architecture Diagram](samples/dual-monitoring-system/docs/architecture-diagram/Dual-monitoring-20260407.jpg)
+![Architecture Diagram](samples/dual_monitoring_system/docs/architecture-diagram/Dual-monitoring-20260407.jpg)
 
 <!-- Template for new samples:
 ### [Sample Name](samples/sample-directory-name/)
