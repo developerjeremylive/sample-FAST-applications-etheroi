@@ -9,10 +9,9 @@ This script validates that the core components work correctly
 
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, Any
 
 # Import only the models module (no external dependencies)
-from models import Span, Trace, Session, EvaluationResult, SessionStatus
+from models import EvaluationResult, Session, SessionStatus, Span, Trace
 
 
 def test_data_models():

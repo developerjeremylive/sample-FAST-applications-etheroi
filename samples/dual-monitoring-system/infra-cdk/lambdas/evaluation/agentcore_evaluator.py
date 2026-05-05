@@ -6,13 +6,13 @@ Follows the official AgentCore evaluation patterns from:
 https://github.com/awslabs/amazon-bedrock-agentcore-samples
 """
 
-import os
-import logging
-from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Any
-from bedrock_agentcore_starter_toolkit import Evaluation
 import json
+import logging
+import os
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 
+from bedrock_agentcore_starter_toolkit import Evaluation
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -308,7 +308,7 @@ class AgentCoreEvaluator:
             if description:
                 kwargs['description'] = description
             
-            response = self.eval_client.update_online_config(**kwargs)
+            self.eval_client.update_online_config(**kwargs)
             
             logger.info(f"Updated online evaluation: {config_id}")
             
@@ -418,7 +418,7 @@ class AgentCoreEvaluator:
                     unique_evaluators.add(evaluator_name)
             
             logger.info(f"Config {config_id}: Unique evaluators: {unique_evaluators}")
-            logger.info(f"=" * 80)
+            logger.info("=" * 80)
             
             if not results:
                 return {

@@ -19,7 +19,6 @@ from datetime import datetime, timezone
 import boto3
 from botocore.auth import SigV4Auth
 from botocore.awsrequest import AWSRequest
-from botocore.credentials import Credentials
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)

@@ -2,10 +2,11 @@
 Custom Resource to configure AgentCore Runtime log delivery
 """
 
-import boto3
 import json
 import logging
-from typing import Dict, Any
+from typing import Any, Dict
+
+import boto3
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -33,7 +34,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             # Note: This uses the UpdateRuntime API which may not support log delivery yet
             # If this fails, log delivery must be configured manually via console
             try:
-                response = agentcore.update_runtime(
+                agentcore.update_runtime(
                     runtimeIdentifier=runtime_id,
                     logDeliveryConfigurations=[
                         {
@@ -44,7 +45,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                         }
                     ]
                 )
-                logger.info(f"Log delivery configured successfully")
+                logger.info("Log delivery configured successfully")
                 
             except Exception as api_error:
                 # If API doesn't support this yet, log but don't fail
