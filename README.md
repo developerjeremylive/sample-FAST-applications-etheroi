@@ -58,7 +58,7 @@ While [FAST](https://github.com/awslabs/fullstack-solution-template-for-agentcor
 ![LLM Council Stages](samples/llm-council/docs/architecture-diagram/llm-council-stages.png)
 
 
-### Dual Monitoring System
+### [Dual Monitoring System](samples/dual-monitoring-system/)
 
 **Description**: A dual-layer monitoring architecture for agentic solutions in dev/prod env. Layer 1 uses AgentCore Evaluations to continuously score live agent interactions with LLM-as-a-Judge methodology, surfacing quality degradation that infrastructure metrics miss. Layer 2 uses AWS DevOps Agent to autonomously investigate infrastructure incidents — pulling CloudWatch logs, building resource topology graphs, and tracing complete failure paths with remediation steps.
 
